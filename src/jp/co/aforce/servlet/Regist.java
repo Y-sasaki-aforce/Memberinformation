@@ -41,7 +41,7 @@ public class Regist extends HttpServlet{
 		if(!r.equals("")) {
 			request.setAttribute("msg", r + Messages.W_CCM0001);
 			request.getRequestDispatcher("../views/regist.jsp").forward(request, response);
-
+		}else {
 
 			try {
 				Check check = new Check();
@@ -63,6 +63,7 @@ public class Regist extends HttpServlet{
 				request.setAttribute("msg", Messages.E_WKK0002);
 				request.getRequestDispatcher("../views/regist.jsp").forward(request, response);
 			}
+
 		}
 	}
 }
